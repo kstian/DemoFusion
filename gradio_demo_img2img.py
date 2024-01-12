@@ -78,4 +78,4 @@ with gr.Blocks(title=f"DemoFusion") as demo:
           button = gr.Button()
         output_images = ImageSlider(show_label=False)
     button.click(fn=generate_images, inputs=[prompt, negative_prompt, height, width, num_inference_steps, guidance_scale, cosine_scale_1, cosine_scale_2, cosine_scale_3, sigma, view_batch_size, stride, seed, image_input], outputs=[output_images], show_progress=True)
-demo.queue().launch(inline=False, share=True, debug=True)
+demo.queue().launch(inline=False, share=False, debug=True)
